@@ -1,52 +1,68 @@
 
 
-<div class="contactUs" id="contactUs">
-    <section id="heading4">
-        <h2>Contact Us</h2>
-    </section>
-    <form id="contact-form">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-            <div class="error-message" id="name-error"></div>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel">
-            <div class="error-message" id="phone-error"></div>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-            <div class="error-message" id="email-error"></div>
-        </div>
-        <div class="form-group">
-            <fieldset>
-                <legend>Preferred Contact Method:</legend>
-                <div class="contact-methods">
-                    <div class="form-group">
-                        <input type="radio" id="email-method" name="contact-method" value="email">
-                        <label for="email-method">Email</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="radio" id="phone-method" name="contact-method" value="phone">
-                        <label for="phone-method">Phone</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="radio" id="sms-method" name="contact-method" value="sms">
-                        <label for="sms-method">SMS</label>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redleg Brewing Company</title>
+        <meta name="author" content="Travis Wiley">
+        <link rel="stylesheet" href="styles.css">
+        <script src="contact.js"></script>
+    </head>
+<body>
+    <include src="header.html"></include>
+
+    <div class="contactUs" id="contactUs">
+            <section id="heading4">
+                <h2>Contact Us</h2>
+            </section>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                    <div class="error-message" id="name-error"></div>
                 </div>
-            </fieldset>
-            <div class="error-message" id="contact-method-error"></div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Preferred Contact Method:</legend>
+                        <div class="contact-methods">
+                            <div class="form-group">
+                                <input type="radio" id="email-method" name="contact-method" value="email">
+                                <label for="email-method">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="phone-method" name="contact-method" value="phone">
+                                <label for="phone-method">Phone</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="sms-method" name="contact-method" value="sms">
+                                <label for="sms-method">SMS</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="error-message" id="contact-method-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="comments">What can we help you with?</label>
+                    <textarea id="comments" name="comments" rows="4" required></textarea>
+                    <div class="error-message" id="comments-error"></div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="comments">What can we help you with?</label>
-            <textarea id="comments" name="comments" rows="4" required></textarea>
-            <div class="error-message" id="comments-error"></div>
-        </div>
-        <div class="form-group">
-            <button type="submit">Submit</button>
-        </div>
-    </form>
-</div>
+
+</body>
+</html>
