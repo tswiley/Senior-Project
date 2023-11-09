@@ -1,3 +1,5 @@
+/* CSS Reset*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,5 +49,16 @@ table {
 header {
 background-color: #002868;    
 height: 200px;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.faq-question:hover {
+    cursor: pointer;
 }
 
