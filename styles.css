@@ -51,6 +51,15 @@ background-color: #002868;
 height: 200px;
 }
 
+.redleg-brewing--chevron-logo {
+    position: absolute;
+    top: 10px; /* Adjust the top distance as needed */
+    left: 10px; /* Adjust the left distance as needed */
+    width: 100px; /* Example width */
+    height: auto; /* Example height */
+    /* Add any other styling you need */
+}
+
 .faq-answer {
     display: none;
     margin-top: 10px;
