@@ -1,29 +1,45 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.getElementById('nav');
-    const hamburger = document.querySelector('.hamburger');
-    const closeIcon = document.querySelector('.closeIcon');
-    const menuIcon = document.querySelector('.menuIcon');
+document.addEventListener("DOMContentLoaded", function () {
+    // Fetch and include the header content
+    fetch("header.html")
+        .then(response => response.text())
+        .then(headerData => {
+            // Create a temporary container to hold the header content
+            const headerContainer = document.createElement("div");
+            headerContainer.innerHTML = headerData;
 
-    function toggleMenu() {
-        nav.classList.toggle('open');
-        hamburger.classList.toggle('open');
-    }
+            // Append the header content to the body
+            document.body.prepend(...headerContainer.childNodes);
 
-    hamburger.addEventListener('click', toggleMenu);
+            // Fetch and include the footer content after fetching the header
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(footerData => {
+                    // Create a temporary container to hold the footer content
+                    const footerContainer = document.createElement("div");
+                    footerContainer.innerHTML = footerData;
 
-    document.addEventListener('click', function (e) {
-        if (!nav.contains(e.target) && e.target !== hamburger && e.target !== menuIcon && e.target !== closeIcon) {
-            nav.classList.remove('open');
-            hamburger.classList.remove('open');
-        }
-    });
+                    // Append the footer content to the body
+                    document.body.appendChild(...footerContainer.childNodes);
 
-    nav.addEventListener('click', function (e) {
-        e.stopPropagation();
-    });
+                    // Add your existing script functionality here
+                    // ...
 
-    const menuItems = document.querySelectorAll('.nav a');
-    menuItems.forEach(function (menuItem) {
-        menuItem.addEventListener('click', toggleMenu);
-    });
+                    // Add event listener for the hamburger menu after content is loaded
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const nav = document.getElementById('nav');
+                    const closeIcon = document.getElementById('close-icon');
+
+                    mobileMenu.addEventListener('click', function () {
+                        mobileMenu.classList.toggle('open');
+                        nav.classList.toggle('show');
+                    });
+
+                    closeIcon.addEventListener('click', function () {
+                        mobileMenu.classList.remove('open');
+                        nav.classList.remove('show');
+                    });
+                })
+                .catch(error => console.error("Error fetching footer content:", error));
+        })
+        .catch(error => console.error("Error fetching header content:", error));
 });
