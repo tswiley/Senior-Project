@@ -31,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-    margin: 0;
+    max-width: 1280px;
+    margin: 0 auto;
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8; /* Adding a light background color */
 }
@@ -143,7 +144,7 @@ body {
 
 /* Style the cart */
 .cart {
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     padding: 10px;
@@ -288,3 +289,65 @@ nav a {
         opacity: 0;
     }
 }
+
+
+@media only screen and (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr 1fr;
+        padding: 10px;
+        background-color: #fff;
+        color: red;
+    }
+    
+    .logo {
+        grid-column: 1;
+    }
+    
+    .cart {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed; 
+        top: 0;
+        right: 0;
+        padding: 10px;
+        z-index: 1000;
+    }
+    
+    .nav {
+        grid-column: 2 / 5; 
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .nav ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    .nav li {
+        margin-right: 20px;
+    }
+    
+    .nav a {
+        text-decoration: none;
+        color: red;
+        font-weight: bold;
+    }   
+    
+    #nav a[href="#contactUs"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px; /* Adjusted padding for better button appearance */
+        border: 2px solid red; /* Red border with 2px width */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer;
+    }
+    
+}
+
+
