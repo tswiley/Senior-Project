@@ -1,22 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch and include the header content
-    fetch("header.html")
+    // Load header.html
+    fetch('header.html')
         .then(response => response.text())
-        .then(headerData => {
-            // Fetch and include the footer content after fetching the header
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(footerData => {
-                    // Manipulate the DOM to include header and footer content
-                    document.body.innerHTML = headerData + document.body.innerHTML + footerData;
-                })
-                .catch(error => console.error("Error fetching footer content:", error));
+        .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
         })
-        .catch(error => console.error("Error fetching header content:", error));
+        .catch(error => console.error('Error fetching header:', error));
 
-    // Add your existing script functionality here
-    // ...
+    // Load footer.html
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        })
+        .catch(error => console.error('Error fetching footer:', error));
 });
+
 
 
 
