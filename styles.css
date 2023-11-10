@@ -16,18 +16,18 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 
 body {
@@ -68,10 +68,10 @@ body {
 }
 
 .cart img {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .logo img {
@@ -148,7 +148,12 @@ body {
     right: 0;
     padding: 10px;
     z-index: 1000;
-    display: none; /* Set initial display property to none */
+}
+
+.cart.show-content #cart-items,
+.cart.show-content #cart-total,
+.cart.show-content button {
+    display: block;
 }
 
 .cart img {
@@ -241,77 +246,6 @@ nav a {
     margin: 0 10px;
 }
 
-/* Style the cart */
-/* ... Your existing styles ... */
-
-/* Style the cart */
-.cart {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    z-index: 1000;
-}
-
-.cart img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.cart h2,
-#cart-items,
-#cart-total,
-button {
-    display: none;
-}
-
-.cart h2 {
-    margin-bottom: 10px;
-}
-
-#cart-items {
-    list-style: none;
-    padding: 0;
-}
-
-#cart-items li {
-    margin-bottom: 10px;
-}
-
-#cart-total {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-button {
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.cart.show-content #cart-items,
-.cart.show-content #cart-total,
-.cart.show-content button {
-    display: block;
-}
-
-
-
-/* Copyright and terms section */
-.copyright {
-    margin-top: 20px;
-}
-
-.copyright a {
-    color: #fff;
-}
-
 @media only screen and (max-width: 1023px) {
     .menu-toggle {
         display: flex;
@@ -326,7 +260,6 @@ button {
         width: 100%;
         transition: transform 0.3s ease;
         background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
 
