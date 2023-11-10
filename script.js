@@ -21,23 +21,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Append the footer content to the body
                     document.body.appendChild(...footerContainer.childNodes);
 
-                    // Add your existing script functionality here
-                    // ...
-
                     // Add event listener for the hamburger menu after content is loaded
                     const mobileMenu = document.getElementById('mobile-menu');
                     const nav = document.getElementById('nav');
-                    const closeIcon = document.getElementById('close-icon');
 
                     mobileMenu.addEventListener('click', function () {
+                        console.log('Mobile menu clicked');
                         mobileMenu.classList.toggle('open');
                         nav.classList.toggle('show');
+                        document.body.style.overflow = nav.classList.contains('show') ? 'hidden' : 'auto';
                     });
 
-                    closeIcon.addEventListener('click', function () {
-                        mobileMenu.classList.remove('open');
-                        nav.classList.remove('show');
+                    // Add event listener for the cart icon
+                    const cartIcon = document.getElementById('cart-icon');
+                    const cart = document.getElementById('cart');
+
+                    cartIcon.addEventListener('click', function () {
+                        cart.classList.toggle('show-content');
                     });
+
+                    // Add your existing script functionality here
+                    // ...
+
                 })
                 .catch(error => console.error("Error fetching footer content:", error));
         })

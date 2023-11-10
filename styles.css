@@ -23,11 +23,13 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -139,18 +141,28 @@ body {
     height: auto;
 }
 
+/* Style the cart */
 .cart {
     position: fixed;
     top: 0;
     right: 0;
     padding: 10px;
     z-index: 1000;
+    display: none; /* Set initial display property to none */
 }
+
 .cart img {
     width: 40px;
     height: 40px;
     cursor: pointer;
     margin-right: 10px;
+}
+
+.cart h2,
+#cart-items,
+#cart-total,
+button {
+    display: none; /* Set initial display property to none */
 }
 
 .cart h2 {
@@ -181,8 +193,8 @@ button {
     font-size: 16px;
 }
 
- /* Style the footer */
- footer {
+/* Style the footer */
+footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -219,12 +231,77 @@ button {
 /* Footer navigation links */
 nav {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: #fff;
     margin: 0 10px;
 }
+
+/* Style the cart */
+/* ... Your existing styles ... */
+
+/* Style the cart */
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.cart img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.cart h2,
+#cart-items,
+#cart-total,
+button {
+    display: none;
+}
+
+.cart h2 {
+    margin-bottom: 10px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+#cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.cart.show-content #cart-items,
+.cart.show-content #cart-total,
+.cart.show-content button {
+    display: block;
+}
+
+
 
 /* Copyright and terms section */
 .copyright {
@@ -247,9 +324,10 @@ nav a {
         top: 70px;
         left: 0;
         width: 100%;
+        transition: transform 0.3s ease;
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1;
+        z-index: 1000;
     }
 
     .nav.show {
@@ -277,9 +355,3 @@ nav a {
         opacity: 0;
     }
 }
-
-
-
-
-
-
