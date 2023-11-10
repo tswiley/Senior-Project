@@ -17,3 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add your existing script functionality here
     // ...
 });
+
+
+document.getElementById("contactLink").addEventListener("click", function() {
+        window.location.href = "contact.html";
+});
+

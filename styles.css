@@ -10,49 +10,123 @@ body {
 }
 
 /* mobile first */
+.header {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.nav-toggle {
+    display: none; /* Initially hide the hamburger menu */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+.nav {
+    display: none; /* Initially hide the navigation menu */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav li {
+    margin: 10px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000; /* Adjust the color as needed */
+    font-weight: bold;
+    font-size: 18px;
+}
 
 
 
 
-
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.header {
-		background-color: #333;
 		color: #fff;
 		padding: 20px;
 		text-align: center;
+		display: grid;
+		grid-template-columns: auto 1fr 1fr 1fr; /* Four columns: logo, menu links, empty, empty */
+		align-items: center; /* Center content vertically in the header */
 	}
 	
 	/* Style the logo */
 	.logo {
-		text-align: left; /* Align the logo to the left */
+		text-align: left;
 	}
 	
 	.logo img {
-		width: 200px; /* Adjust the size as needed */
+		width: 200px;
 	}
 	
 	/* Style the navigation */
 	.nav {
-		text-align: center; /* Align the navigation to the center */
+		text-align: center;
+		grid-column: 3 / span 3; /* Make the navigation start from column 2 and span 2 columns */
 	}
 	
 	.nav ul {
 		list-style: none;
-		display: inline-block; /* Make the list items display horizontally */
+		display: flex; /* Use flexbox for more control */
+		justify-content: space-around; /* Distribute items evenly */
+		padding: 0;
 	}
 	
 	.nav li {
 		display: inline;
-		margin: 0 15px;
+		margin: 0 20px; /* Increased margin for more spacing */
 	}
 	
 	.nav a {
 		text-decoration: none;
-		color: #fff;
+		color: #ff0000; /* Red color for links */
 		font-weight: bold;
-		font-size: 16px;
+		font-size: 18px; /* Larger font size */
 	}
+	
+/* Style the Contact link with a rounded corner box */
+.nav a.contact {
+    padding: 10px 15px;
+    border: 2px solid #ff0000; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    color: #ff0000; /* Red color for text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* On hover, change the background color */
+.nav a.contact:hover {
+    background-color: #ff0000; /* Red background color on hover */
+    color: #fff; /* White text color on hover */
+}
+
+	
+	
+	
 	
 
 	main {
