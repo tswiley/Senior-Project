@@ -1,29 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Fetch and include the header content
-    fetch("header.html")
-        .then(response => response.text())
-        .then(headerData => {
-            // Fetch and include the footer content after fetching the header
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(footerData => {
-                    // Manipulate the DOM to include header and footer content
-                    document.body.innerHTML = headerData + document.body.innerHTML + footerData;
-                })
-                .catch(error => console.error("Error fetching footer content:", error));
-        })
-        .catch(error => console.error("Error fetching header content:", error));
+document.addEventListener('DOMContentLoaded', function () {
+    const nav = document.getElementById('nav');
+    const hamburger = document.querySelector('.hamburger');
+    const closeIcon = document.querySelector('.closeIcon');
+    const menuIcon = document.querySelector('.menuIcon');
 
-    // Add your existing script functionality here
-    // ...
+    function toggleMenu() {
+        nav.classList.toggle('open');
+        hamburger.classList.toggle('open');
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target) && e.target !== hamburger && e.target !== menuIcon && e.target !== closeIcon) {
+            nav.classList.remove('open');
+            hamburger.classList.remove('open');
+        }
+    });
+
+    nav.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+
+    const menuItems = document.querySelectorAll('.nav a');
+    menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener('click', toggleMenu);
+    });
 });
-
-
-
-
-
-
-document.getElementById("contactLink").addEventListener("click", function() {
-        window.location.href = "contact.html";
-});
-
