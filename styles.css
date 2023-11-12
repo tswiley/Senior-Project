@@ -61,6 +61,8 @@ main {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    padding-top: 10px;
+    padding-left: 15px;
 }
 
 .bar {
@@ -130,8 +132,17 @@ main {
     
 }
 
+h1 {
+    padding-bottom: 20px;
+}
+.headering h1,
+p {
+    color: #fff;
+    text-align: center;
+}
+
 .brewery {
-    display: none; /* Since the image is now a background, hide the img element */
+     Since the image is now a background, hide the img element */
 }
 
 .brewery img {
