@@ -133,15 +133,27 @@ main {
 
 .home-intro img {
     width: 100%;
-    max-width: auto; /* Set maximum width to 820 pixels */
-    max-height: 400px;
+    height: 100%;
     object-fit: cover;
+    transition: opacity 3s ease-in-out;
 }
 
 .home-intro {
     position: relative;
     overflow: hidden; /* Ensure that controls are within the image container */
+    max-height: 500px; /* Set a fixed height for the container */
 }
+
+.home-intro.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.home-intro.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
 
 .controls {
     position: absolute;
@@ -149,14 +161,11 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 0; /* Adjust the distance from the bottom to make sure it's at the bottom */
-    padding: 10px; /* Add some padding for better visibility */
-    box-sizing: border-box; /* Include padding and border in the box model */
+    bottom: 0; 
+    padding: 10px; 
+    box-sizing: border-box; 
     z-index: 1000;
-    border: 2px solid red; /* Add a red border for visualization */
 }
-
-
 
 .arrow,
 .play-pause {
@@ -171,20 +180,13 @@ main {
 }
 
 .play-pause {
-    /* Center the play/pause button */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 14px; /* Adjust as needed */
-    padding: 8px 16px; /* Adjust as needed */
+    font-size: 14px; 
+    padding: 8px 16px; 
 }
 
-/* Adjust the position of the play/pause button for better visibility */
-.play-pause {
-    bottom: 10px;
-}
-
-/* Update the arrow button styles for better visibility */
 .arrow {
     font-size: 24px;
     padding: 12px;
@@ -613,8 +615,6 @@ nav a {
         max-height: 500px;
         object-fit: cover;
     }
-
-    
 
     /* main-grid */
     .main-grid {
