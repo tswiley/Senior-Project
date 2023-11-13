@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Function to update the cart items and total
                     function updateCart() {
+                        console.log('Updating cart......')
                         // Fetch cart items from store.html
                         const cartItemsContainer = document.getElementById('cart-items');
                         const cartItems = Array.from(cartItemsContainer.children).map(item => {
@@ -72,20 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Add event listener for the hamburger menu after content is loaded
                     const mobileMenu = document.getElementById('mobile-menu');
                     const nav = document.getElementById('nav');
-                    const closeIcon = document.getElementById('close-icon');
 
                     mobileMenu.addEventListener('click', function () {
                         console.log('Mobile menu clicked');
                         mobileMenu.classList.toggle('open');
                         nav.classList.toggle('show');
                         document.body.style.overflow = nav.classList.contains('show') ? 'hidden' : 'auto';
-                    });
-
-                    closeIcon.addEventListener('click', function () {
-                        console.log('Close icon clicked');
-                        mobileMenu.classList.remove('open');
-                        nav.classList.remove('show');
-                        document.body.style.overflow = 'auto';
                     });
 
                     // Add event listener for closing the cart when clicking outside of it
@@ -104,5 +97,3 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching header content:", error));
 });
-
-
