@@ -1,134 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch and include the header content
-    fetch("header.html")
-        .then(response => response.text())
-        .then(headerData => {
-            // Create a temporary container to hold the header content
-            const headerContainer = document.createElement("div");
-            headerContainer.innerHTML = headerData;
+    const mainImgContainer = document.querySelector('.home-intro');
+    const imageList = [
+        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/sitting.jpg',
+        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/aerial2.jpg',
+        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/beerrock.jpg',
+        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/frontbuilding.jpg',
+        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/indoors1.jpg'
+    ];
+    let currentIndex = 0;
+    let intervalId;
 
-            // Append the header content to the body
-            document.body.prepend(...headerContainer.childNodes);
+    function rotateImage() {
+        const mainImg = document.createElement('img');
+        mainImg.src = imageList[currentIndex];
+        mainImg.alt = 'Main Image';
+        mainImg.style.width = '100%';
+        mainImg.style.height = '600px';
 
-            // Fetch and include the footer content after fetching the header
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(footerData => {
-                    // Create a temporary container to hold the footer content
-                    const footerContainer = document.createElement("div");
-                    footerContainer.innerHTML = footerData;
+        mainImgContainer.innerHTML = '';
+        mainImgContainer.appendChild(mainImg);
 
-                    // Append the footer content to the body
-                    document.body.appendChild(...footerContainer.childNodes);
+        currentIndex = (currentIndex + 1) % imageList.length;
+    }
 
-                    // Add event listener for the cart icon
-                    const cartIcon = document.getElementById('cart-icon');
-                    const cartContent = document.getElementById('cart-content');
+    function playPause() {
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+            playPauseBtn.innerText = 'Play';
+        } else {
+            intervalId = setInterval(rotateImage, 5000);
+            playPauseBtn.innerText = 'Pause';
+        }
+    }
 
-                    cartIcon.addEventListener('click', function () {
-                        console.log('Cart icon clicked');
-                        // Toggle the visibility of the cart content
-                        cartContent.classList.toggle('open');
-                        document.body.style.overflow = cartContent.classList.contains('open') ? 'hidden' : 'auto';
+    function navigateImage(direction) {
+        if (direction === 'prev') {
+            currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+        } else {
+            currentIndex = (currentIndex + 1) % imageList.length;
+        }
+        rotateImage();
+    }
 
-                        // Call the updateCart function when the cart is opened
-                        if (cartContent.classList.contains('open')) {
-                            updateCart();
-                        }
-                    });
+    document.getElementById('prevBtn').addEventListener('click', () => navigateImage('prev'));
+    document.getElementById('playPauseBtn').addEventListener('click', playPause);
+    document.getElementById('nextBtn').addEventListener('click', () => navigateImage('next'));
 
-                    // Function to update the cart items and total
-                    function updateCart() {
-                        // Fetch cart items from store.html
-                        const cartItemsContainer = document.getElementById('cart-items');
-                        const cartItems = Array.from(cartItemsContainer.children).map(item => {
-                            return {
-                                name: item.dataset.name,
-                                price: parseFloat(item.dataset.price),
-                            };
-                        });
-
-                        // Clear existing cart content
-                        cartItemsContainer.innerHTML = '';
-
-                        // Populate cart items or display "Your cart is empty"
-                        if (cartItems.length > 0) {
-                            cartItems.forEach(item => {
-                                const cartItemElement = document.createElement('div');
-                                cartItemElement.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-                                cartItemsContainer.appendChild(cartItemElement);
-                            });
-                        } else {
-                            const emptyCartMessage = document.createElement('div');
-                            emptyCartMessage.textContent = 'Your cart is empty.';
-                            cartItemsContainer.appendChild(emptyCartMessage);
-                        }
-
-                        // Calculate and display the total
-                        const cartTotal = cartItems.reduce((total, item) => total + item.price, 0);
-                        document.getElementById('cart-total').textContent = `Total: $${cartTotal.toFixed(2)}`;
-                    }
-
-                    // Add event listener for the hamburger menu after content is loaded
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    const nav = document.getElementById('nav');
-                    const closeIcon = document.getElementById('close-icon');
-
-                    mobileMenu.addEventListener('click', function () {
-                        console.log('Mobile menu clicked');
-                        mobileMenu.classList.toggle('open');
-                        nav.classList.toggle('show');
-                        document.body.style.overflow = nav.classList.contains('show') ? 'hidden' : 'auto';
-                    });
-
-                    closeIcon.addEventListener('click', function () {
-                        console.log('Close icon clicked');
-                        mobileMenu.classList.remove('open');
-                        nav.classList.remove('show');
-                        document.body.style.overflow = 'auto';
-                    });
-
-                    // Add event listener for closing the cart when clicking outside of it
-                    document.addEventListener('click', function (event) {
-                        const isCartIcon = event.target.id === 'cart-icon';
-                        const isCartContent = event.target.closest('#cart-content');
-
-                        if (!isCartIcon && !isCartContent && cartContent.classList.contains('open')) {
-                            cartContent.classList.remove('open');
-                            document.body.style.overflow = 'auto';
-                        }
-                    });
-
-                    // Dynamic image rotation
-                    const mainImgContainer = document.querySelector('.home-img');
-                    const imageList = [
-                        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/sitting.jpg',
-                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/aerial2.jpg',
-                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/aerial3.jpg',
-                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/frontbuilding.jpeg',
-                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/indoors1.png'
-                    ];
-                    let currentIndex = 0;
-
-                    function rotateImage() {
-                        const mainImg = document.createElement('img');
-                        mainImg.src = imageList[currentIndex];
-                        mainImg.alt = 'Main Image';
-
-                        // Clear existing content in the container
-                        mainImgContainer.innerHTML = '';
-
-                        // Append the new image to the container
-                        mainImgContainer.appendChild(mainImg);
-
-                        currentIndex = (currentIndex + 1) % imageList.length;
-                    }
-
-                    // Set interval for image rotation (change every 5000 milliseconds or 5 seconds)
-                    setInterval(rotateImage, 5000);
-
-                })
-                .catch(error => console.error("Error fetching footer content:", error));
-        })
-        .catch(error => console.error("Error fetching header content:", error));
+    // Start the image rotation
+    intervalId = setInterval(rotateImage, 5000);
 });
