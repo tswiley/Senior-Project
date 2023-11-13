@@ -36,13 +36,14 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8; 
+    background-color: #fff; 
 }
 
 main {
-    background-color: #ffefdb;
+    background-color: #fff;
     padding-bottom: 50px;
     width: 100%;
+    justify-items: center;
 }
 
 .header {
@@ -496,7 +497,7 @@ nav a {
 }
 @media only screen and (min-width: 1024px) {
     main {
-        background-color: #ffefdb;
+        background-color: #fff;
     }
 
     .menu-toggle {
@@ -547,6 +548,7 @@ nav a {
     }
 
     .cart {
+        display: none;
         position: absolute;
         top: 20px;
     }

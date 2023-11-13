@@ -92,6 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         }
                     });
 
+                    // Add event listener for the logo to link to the home page
+                    const logo = document.querySelector('.logo img');
+                    logo.addEventListener('click', function () {
+                        window.location.href = 'index.html'; // Replace with the actual home page URL
+                    });
+
                 })
                 .catch(error => console.error("Error fetching footer content:", error));
         })

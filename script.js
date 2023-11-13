@@ -99,10 +99,36 @@ document.addEventListener("DOMContentLoaded", function () {
                         }
                     });
 
+                    // Dynamic image rotation
+                    const mainImgContainer = document.querySelector('.home-img');
+                    const imageList = [
+                        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/sitting.jpg',
+                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/aerial2.jpg',
+                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/aerial3.jpg',
+                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/frontbuilding.jpeg',
+                        'https://raw.githubusercontent.com/your-username/your-repo-name/main/Images/indoors1.png'
+                    ];
+                    let currentIndex = 0;
+
+                    function rotateImage() {
+                        const mainImg = document.createElement('img');
+                        mainImg.src = imageList[currentIndex];
+                        mainImg.alt = 'Main Image';
+
+                        // Clear existing content in the container
+                        mainImgContainer.innerHTML = '';
+
+                        // Append the new image to the container
+                        mainImgContainer.appendChild(mainImg);
+
+                        currentIndex = (currentIndex + 1) % imageList.length;
+                    }
+
+                    // Set interval for image rotation (change every 5000 milliseconds or 5 seconds)
+                    setInterval(rotateImage, 5000);
+
                 })
                 .catch(error => console.error("Error fetching footer content:", error));
         })
         .catch(error => console.error("Error fetching header content:", error));
 });
-
-
