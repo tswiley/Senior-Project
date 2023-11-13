@@ -561,7 +561,7 @@ nav a {
         gap: 10px;
     }
 
-    .community h1 {
+    .community {
         grid-column: 2;
         grid-row: 1;
     }

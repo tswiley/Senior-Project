@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 320" style="enable-background:new 0 0 500 320;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#FF0000;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill:none;}
+	.st2{fill:#FF0000;}
+	.st3{font-family:'BatteryPark';}
+	.st4{font-size:90px;}
+	.st5{font-size:88px;}
+	.st6{font-size:60px;}
+</style>
+<g id="Layer_2">
+	<g id="Patch">
+		<path class="st0" d="M452.9,244.3H50.7c-17.8,0-32.4-14.4-32.4-31.9V84.8c0-17.5,14.6-31.9,32.4-31.9h402.2
+			c17.8,0,32.4,14.4,32.4,31.9v127.6C485.3,230,470.8,244.3,452.9,244.3z"/>
+	</g>
+</g>
+<g id="Layer_3">
+	<rect x="62.6" y="79.4" class="st1" width="138.1" height="69.9"/>
+	<text transform="matrix(1 0 0 1 62.5762 142.4666)" class="st2 st3 st4">RED</text>
+	<rect x="321.3" y="81.5" class="st1" width="131.1" height="65.7"/>
+	<text transform="matrix(1 0 0 1 321.2541 143.1472)" class="st2 st3 st5">LEG</text>
+	<rect x="31.2" y="175.7" class="st1" width="448.9" height="48"/>
+	<text transform="matrix(1 0 0 1 31.2192 217.7604)" class="st2 st3 st6">BREWING COMPANY</text>
+</g>
+<g id="Layer_4">
+	<g id="Cannons">
+		
+			<image style="overflow:visible;enable-background:new    ;" width="629" height="397" xlink:href="635B2AE6FC2EAF63.png"  transform="matrix(0.17 0 0 0.2021 205.5187 74.1995)">
+		</image>
+	</g>
+</g>
+</svg>
