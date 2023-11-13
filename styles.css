@@ -316,6 +316,44 @@ button:hover {
     margin-top: 5px;
 }
 
+/* faq page */
+/* Updated CSS with gap between dropdowns */
+
+.faq-answer {
+    display: none;
+    text-align: center;
+    padding: 10px; /* Added padding for better card styling */
+}
+
+.faq-question.active .faq-answer {
+    display: block;
+}
+
+/* Updated styling for card-like appearance */
+.faq-question {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Increased border-radius for rounded corners */
+    overflow: hidden; /* Hide overflow to prevent box shadow bleed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    background-color: #fff; /* Default background color */
+    width: 75%; /* Set width to 75% of the page */
+    margin: 0 auto; /* Center the card on the page */
+    margin-bottom: 20px; /* Adjust the margin to create a gap between dropdowns */
+}
+
+.faq-question:last-child {
+    margin-bottom: 0; /* Remove margin from the last child to avoid extra space */
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+
+
+
 /* Style the footer */
 footer {
     background-color: #333;
@@ -619,4 +657,8 @@ nav a {
     button:hover {
         background-color: #0056b3;
     }
+
+    /* FAQ Page */
+    .faq-question {
+        width: 75%;
 }

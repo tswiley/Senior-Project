@@ -1,60 +1,22 @@
+// faq.js
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch and include the header content
-    fetch("header.html")
-        .then(response => response.text())
-        .then(headerData => {
-            // Create a temporary container to hold the header content
-            const headerContainer = document.createElement("div");
-            headerContainer.innerHTML = headerData;
+   // JavaScript to handle the FAQ dropdown functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
 
-            // Append the header content to the body
-            document.body.prepend(...headerContainer.childNodes);
+    faqQuestions.forEach((question) => {
+        const answer = question.querySelector('.faq-answer');
+        const addressParagraph = question.querySelector('p'); // Select the paragraph element
 
-            // Fetch and include the footer content after fetching the header
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(footerData => {
-                    // Create a temporary container to hold the footer content
-                    const footerContainer = document.createElement("div");
-                    footerContainer.innerHTML = footerData;
+        // Add a click event listener to the address paragraph
+        addressParagraph.addEventListener('click', (event) => {
+            // Open the link in a new tab
+            event.stopPropagation(); // Prevent the question click event from firing
+            window.open('https://www.google.com/maps/place/Red+Leg+Brewing+Company/@38.8961298,-104.8705226,17z/data=!3m1!4b1!4m6!3m5!1s0x87134fd6ed613e67:0x323fb74999b17aa2!8m2!3d38.8961298!4d-104.8705226!16s%2Fg%2F12m977n5f?entry=ttu', '_blank');
+        });
 
-                    // Append the footer content to the body
-                    document.body.appendChild(...footerContainer.childNodes);
-
-                    // Add your existing script functionality here
-                    // ...
-
-                    // Add event listener for the hamburger menu after content is loaded
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    const nav = document.getElementById('nav');
-                    const closeIcon = document.getElementById('close-icon');
-
-                    mobileMenu.addEventListener('click', function () {
-                        mobileMenu.classList.toggle('open');
-                        nav.classList.toggle('show');
-                    });
-
-                    closeIcon.addEventListener('click', function () {
-                        mobileMenu.classList.remove('open');
-                        nav.classList.remove('show');
-                    });
-                })
-                .catch(error => console.error("Error fetching footer content:", error));
-        })
-        .catch(error => console.error("Error fetching header content:", error));
-});
-
-
-
-
-
-// JavaScript to handle the FAQ dropdown functionality
-const faqQuestions = document.querySelectorAll('.faq-question');
-
-faqQuestions.forEach((question) => {
-    const answer = question.querySelector('.faq-answer');
-
-    question.addEventListener('click', () => {
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        question.addEventListener('click', () => {
+            question.classList.toggle('active');
+        });
     });
 });
