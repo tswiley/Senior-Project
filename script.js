@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const mainImg = document.createElement('img');
         mainImg.src = imageList[currentIndex];
         mainImg.alt = 'Main Image';
-        mainImg.style.width = '100%';
-        mainImg.style.height = '600px';
 
         mainImgContainer.innerHTML = '';
         mainImgContainer.appendChild(mainImg);

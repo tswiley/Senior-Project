@@ -134,7 +134,7 @@ main {
 .home-intro img {
     width: 100%;
     max-width: auto; /* Set maximum width to 820 pixels */
-    height: 400px;
+    max-height: 400px;
     object-fit: cover;
 }
 
@@ -153,7 +153,9 @@ main {
     padding: 10px; /* Add some padding for better visibility */
     box-sizing: border-box; /* Include padding and border in the box model */
     z-index: 1000;
+    border: 2px solid red; /* Add a red border for visualization */
 }
+
 
 
 .arrow,
@@ -559,7 +561,7 @@ nav a {
     .header {
         color: red;
         display: grid;
-        grid-template-columns: auto 1fr auto .25fr;
+        grid-template-columns: auto 1fr auto;
     }
 
     .logo img {
@@ -590,12 +592,12 @@ nav a {
         font-weight: bold;
     }
 
-    #nav a[href="#contactUs"] {
-        background-color: #007bff;
+    #nav a[href="contact.html"] {
+        background-color: red;
         color: #fff;
         padding: 10px 20px;
-        border: 2px solid red;
-        border-radius: 5px;
+        border: 3px solid #007bff;
+        border-radius: 10px;
         cursor: pointer;
     }
 
@@ -608,7 +610,7 @@ nav a {
     .home-intro img {
         width: 100%;
         max-width: auto; /* Set maximum width to 820 pixels */
-        height: 700px;
+        max-height: 500px;
         object-fit: cover;
     }
 
