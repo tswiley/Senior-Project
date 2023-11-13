@@ -133,6 +133,7 @@ main {
 .main-img img {
    max-width: 100%;
    height: auto;
+   padding-bottom: 50px;
 }
 
 h1,
@@ -158,12 +159,20 @@ p {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .beertaps img,
 .food img {
     max-width: 100%;
     height: auto;
+    padding-bottom: 50px;
+}
+
+.event img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Center the products in a single column */
@@ -402,14 +411,14 @@ nav a {
     .main-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 4, 1fr;
-        gap: 20px;
+        grid-template-rows: repeat(4, .75fr);
         width: 100%;
         margin: 20px auto;
+        gap: 10px;
     }
 
-    .community {
-        grid-column: 1;
+    .community h1 {
+        grid-column: 2;
         grid-row: 1;
     }
 
