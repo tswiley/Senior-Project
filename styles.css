@@ -258,6 +258,64 @@ button {
     font-size: 16px;
 }
 
+/* form page */
+.contactUs {
+    margin: 20px;
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-methods {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-methods label {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
 /* Style the footer */
 footer {
     background-color: #333;
@@ -479,5 +537,86 @@ nav a {
         padding: 10px;
         border-radius: 4px;
         font-size: 16px;
+    }
+
+    /* contact form */
+    .contactUs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    #contact-form {
+        max-width: 600px;
+        width: 100%;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-top: 5px;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: #007bff;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    legend {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .contact-methods {
+        display: flex;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
     }
 }
