@@ -89,7 +89,6 @@ main {
 .logo img {
     max-width: 100%;
     height: auto;
-    padding-bottom: 20px;
 }
 
 .nav {
@@ -399,6 +398,37 @@ nav a {
         top: 20px;
     }
 
+    /* main-grid */
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 4, 1fr;
+        gap: 20px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .community {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .beer {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .food {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .events {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    /* Store page */
     #product-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
