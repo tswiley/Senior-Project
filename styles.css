@@ -111,6 +111,10 @@ main {
     font-weight: bold;
 }
 
+.contact {
+    display: none;
+}
+
 #toggle-label {
     transition: opacity 0.5s var(--animation-curve);
 }
@@ -140,56 +144,23 @@ main {
 
 .home-intro {
     position: relative;
-    overflow: hidden; /* Ensure that controls are within the image container */
-    max-height: 500px; /* Set a fixed height for the container */
+    overflow: hidden;
+    max-height: 500px;
 }
 
-.home-intro.fade-out {
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Adjust the duration and timing function as needed */
-}
-
-.home-intro.fade-in {
-    opacity: 1;
-    transition: opacity 1s ease-in-out; /* Adjust the duration and timing function as needed */
-}
-
-
-.controls {
-    position: absolute;
+.home-intro img {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    bottom: 0; 
-    padding: 10px; 
-    box-sizing: border-box; 
-    z-index: 1000;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 3s ease-in-out;
 }
 
-.arrow,
-.play-pause {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: #fff;
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
+.home-intro .active {
+    opacity: 1;
 }
 
-.play-pause {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px; 
-    padding: 8px 16px; 
-}
-
-.arrow {
-    font-size: 24px;
-    padding: 12px;
+.home-intro img:not(.active) {
+    opacity: 0;
 }
 
 h1,
@@ -586,7 +557,7 @@ nav a {
     .header {
         color: red;
         display: grid;
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: 250px 1fr 200px;
     }
 
     .logo img {
@@ -597,14 +568,13 @@ nav a {
 
     .nav {
         display: flex;
-        justify-content: flex-end;
     }
 
     .nav ul {
         list-style: none;
         display: flex;
         margin: 0;
-        padding: 0;
+        padding-top: 15px;
     }
 
     .nav li {
@@ -617,13 +587,26 @@ nav a {
         font-weight: bold;
     }
 
-    #nav a[href="contact.html"] {
+    .contact {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .contact ul {
+        list-style: none;
+    }
+
+    #contact a[href="contact.html"] {
         background-color: red;
         color: #fff;
         padding: 10px 20px;
         border: 3px solid #007bff;
         border-radius: 10px;
         cursor: pointer;
+        justify-self: flex-end;
+        text-decoration: none;
     }
 
     .cart {
@@ -649,8 +632,13 @@ nav a {
         padding-top: 50px;
     }
 
-    h1, h2 {
+    body.index-page .main-container h1,
+    body.index-page .main-container h2 {
         padding-top: 100px;
+    }
+
+    p {
+        padding: 25px;
     }
 
     .community {
