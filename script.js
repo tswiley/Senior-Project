@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainImgContainer = document.querySelector('.home-intro');
     const imageList = [
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/sitting.jpg',
-        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/aerial2.jpg',
+        'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/aerial4.jpeg',
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/beerrock.jpg',
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/frontbuilding.jpg',
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/indoors1.jpg'
