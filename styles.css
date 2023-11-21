@@ -150,14 +150,6 @@ main {
     transition: opacity 3s ease-in-out;
 }
 
-.home-intro .active {
-    opacity: 1;
-}
-
-.home-intro img:not(.active) {
-    opacity: 0;
-}
-
 h1,
 h2,
 p {
