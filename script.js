@@ -1,46 +1,43 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const mainImgContainer = document.querySelector('.home-intro');
-    const imageList = [
+$(document).ready(function () {
+    // Array of image URLs
+    const images = [
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/sitting.jpg',
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/aerial4.jpeg',
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/beerrock.jpg',
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/frontbuilding.jpg',
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/indoors1.jpg'
     ];
-    let currentIndex = 0;
-    let intervalId;
 
-    // Preload images
-    const imageObjects = imageList.map(src => {
-        const img = new Image();
-        img.src = src;
-        return img;
-    });
+    // Set initial image source
+    $('#intro-image').attr('src', images[0]);
 
-    function fadeIn() {
-        const mainImg = mainImgContainer.querySelector('img');
-        mainImg.src = imageObjects[currentIndex].src;
-        mainImg.style.opacity = 0; // Set initial opacity to 0
+    // Counter to keep track of the current image
+    let counter = 0;
 
-        // Trigger reflow to apply the fade-in effect
-        void mainImgContainer.offsetWidth;
+    // Function to rotate images
+    function rotateImages() {
+        // Increment counter and loop back to the beginning if necessary
+        counter = (counter + 1) % images.length;
 
-        mainImg.style.opacity = 1; // Set opacity to 1 for fade-in
+        // Create a new image element
+        const newImage = new Image();
+
+        // Set the next image source
+        newImage.src = images[counter];
+
+        // Set the onload event to animate the opacity
+        newImage.onload = function () {
+            // Fade out the current image
+            $('#intro-image').animate({ opacity: 0 }, 1000, function () {
+                // Set the next image source
+                $('#intro-image').attr('src', images[counter]);
+
+                // Fade in the new image
+                $('#intro-image').animate({ opacity: 1 }, 1000);
+            });
+        };
     }
 
-    function rotateImage() {
-        const mainImg = mainImgContainer.querySelector('img');
-        mainImg.style.opacity = 0 // Set opacity to 0 for fade-out
-        currentIndex = (currentIndex + 1) % imageList.length;
-
-        setTimeout(() => {
-            fadeIn(); // Trigger fade-in after fade-out
-        }, 1000); // Adjust the duration as needed
-    }
-
-    // Initial display of the first image
-    fadeIn();
-
-    // Start the image rotation
-    intervalId = setInterval(rotateImage, 5000);
+    // Set interval to rotate images every 5000 milliseconds (5 seconds)
+    setInterval(rotateImages, 5000);
 });
