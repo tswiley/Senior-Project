@@ -212,17 +212,20 @@ p {
 }
 
 .award img {
-    max-width: 100%;
+    max-width: auto;
+    height: 100%;
     display: block;
     margin: 0 auto;
-    padding-bottom: 50px;
 }
 
-.beertaps img,
+.beertaps img {
+    max-width: 100%;
+    height: auto;
+}
+
 .food img {
     max-width: 100%;
     height: auto;
-    padding-bottom: 50px;
 }
 
 .event img {
@@ -631,7 +634,7 @@ nav a {
     
     .home-intro img {
         width: 100%;
-        max-width: auto; /* Set maximum width to 820 pixels */
+        max-width: auto; 
         max-height: 500px;
         object-fit: cover;
     }
@@ -643,12 +646,20 @@ nav a {
         grid-template-rows: repeat(4, .75fr);
         width: 100%;
         margin: 20px auto;
-        gap: 10px;
+        padding-top: 50px;
+    }
+
+    h1, h2 {
+        padding-top: 100px;
     }
 
     .community {
         grid-column: 2;
         grid-row: 1;
+    }
+
+    .community p {
+
     }
 
     .beer-main {
@@ -657,12 +668,12 @@ nav a {
     }
 
     .food-main {
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 3;
     }
 
     .events-main {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 4;
     }
 
