@@ -535,6 +535,10 @@ nav a {
     .menu-toggle.open .bar:nth-child(3) {
         opacity: 0;
     }
+
+    .home-intro img {
+        height: 100%; /* Adjust for responsiveness on small screens */
+    }
 }
 @media only screen and (min-width: 1024px) {
     main {
