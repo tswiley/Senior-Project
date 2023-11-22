@@ -7,7 +7,9 @@ $(document).ready(function () {
         'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Images/indoors1.jpg'
     ];
 
-    $('#intro-image').attr('src', images[0]);
+    const introImage = $('#intro-image');
+
+    introImage.attr('src', images[0]);
 
     let counter = 0;
 
@@ -15,13 +17,11 @@ $(document).ready(function () {
         counter = (counter + 1) % images.length;
 
         const newImage = new Image();
-
         newImage.src = images[counter];
 
         newImage.onload = function () {
-            $('#intro-image').animate({ opacity: 0 }, 1000, function () {
-                $('#intro-image').attr('src', images[counter]);
-                $('#intro-image').animate({ opacity: 1 }, 1000);
+            introImage.fadeOut(5000, function () {
+                introImage.attr('src', images[counter]).fadeIn(5000);
             });
         };
     }
