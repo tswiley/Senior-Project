@@ -1,19 +1,19 @@
 const products = [
-    { name: 'Product 1', price: 19.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/angelruntee.png' },
-    { name: 'Product 2', price: 29.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/beanie.png' },
-    { name: 'Product 3', price: 14.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/buckethat.png' },
-    { name: 'Product 4', price: 24.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/coloradobluetee.png' },
-    { name: 'Product 5', price: 39.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/giftcard.png' },
-    { name: 'Product 6', price: 9.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/graytee.png' },
-    { name: 'Product 7', price: 49.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/koozie.png' },
-    { name: 'Product 8', price: 34.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/ladiescrewgray.png' },
-    { name: 'Product 9', price: 16.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/ladiesmuscleshirt.png' },
-    { name: 'Product 10', price: 22.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/lsgray.png' },
-    { name: 'Product 11', price: 18.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/mensmuscletee.png' },
-    { name: 'Product 12', price: 27.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/redmountaintee.png' },
-    { name: 'Product 13', price: 11.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/sticker1.png' },
-    { name: 'Product 14', price: 32.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/sticker2.png' },
-    { name: 'Product 15', price: 32.99, image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/stickerpack.png' },
+    { name: 'Product 1', price: 19.99, description: 'Description for Product 1', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/angelruntee.png' },
+    { name: 'Product 2', price: 29.99, description: 'Light grey beanie with Red Logo. Yupoong cuffed beanie. 100% acrylic, Waffle Knit Pattern and woven label', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/beanie.png' },
+    { name: 'Bucket Hat', price: 14.99, description: 'Navy Blue bucket hat with Red Logo.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/buckethat.png' },
+    { name: 'T-Shirt Colorado – Unisex', price: 24.99, description: 'Colorado Flag Design', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/coloradobluetee.png' },
+    { name: 'Gift Card', price: 39.99, description: 'This is a physical gift card. Digital cards are not available. If you would like a gift card for a different dollar amount, please call us at 719-598-3776 during business hours. Gift cards cannot be used as a payment method through our online shop at this time. To use a gift card as payment, please call our taproom for assistance.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/giftcard.png' },
+    { name: 'T-Shirt Grey – Unisex', price: 9.99, description: 'Grey t-shirt with Red Leg Logo on the front.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/graytee.png' },
+    { name: 'Koozie', price: 49.99, description: 'Tan Koozie with Red Leg logo and sketch of the brewery.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/koozie.png' },
+    { name: 'Crop Top', price: 34.99, description: 'This modest-crop tee with inset sleeves creates an unforgettable silhouette that you will have to have in all colors. Features: Flowy Fit. Side-seamed. Tailored Sleeve. Modest crop.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/ladiescrewgray.png' },
+    { name: 'Muscle Tee - Ladies', price: 16.99, description: 'Perfectly flowy t-shirt and forward enough to wear everywhere, this must-have women’s muscle tee is an on-trend essential. Rolled cuffs add an element of style and a high-low, raw-edge hem gives it need-now appeal.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/ladiesmuscleshirt.png' },
+    { name: 'Product 10', price: 22.99, description: 'Description for Product 10', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/lsgray.png' },
+    { name: 'Muscle Tank ', price: 18.99, description: 'This updated unisex jersey muscle tank fits like a well-loved favorite, featuring a crew neck, cutoff sleeves with wide armholes and a retail fit. Designed with superior Airlume combed and ring-spun cotton, this tank acts as a blank canvas for printing.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/mensmuscletee.png' },
+    { name: 'T-Shirt Mountain Logo – Unisex', price: 27.99, description: '', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/redmountiantee.png' },
+    { name: 'Product 13', price: 11.99, description: 'Description for Product 13', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/Sticker1.png' },
+    { name: 'Product 14', price: 32.99, description: 'Description for Product 14', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/sticker2.png' },
+    { name: 'Product 15', price: 32.99, description: 'Description for Product 15', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/stickerpack.png' },
 ];
 
 function addToCart(productName, price, quantity) {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         productSection.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h2>${product.name}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>${product.description}</p>
             <p>$${product.price.toFixed(2)}</p>
             <label for="quantity-${product.name}">Quantity:</label>
             <input type="number" id="quantity-${product.name}" value="1" min="1" class="quantity-input">
