@@ -584,6 +584,7 @@ nav a {
 
     .nav ul {
         list-style: none;
+        justify-self: center;
         display: flex;
         margin: 0;
         padding-top: 15px;
@@ -618,7 +619,6 @@ nav a {
         border: 3px solid #007bff;
         border-radius: 10px;
         cursor: pointer;
-        justify-self: flex-end;
         text-decoration: none;
     }
 
