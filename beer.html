@@ -1,85 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redleg Brewing Company</title>
     <meta name="author" content="Travis Wiley">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script defer src="main.js"></script>
     <script src="beer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
+    <img src="Images/bartender.jpg" alt="bartender serving drinks">
 
-    <section>
-        <h2>Exclusive</h2>
+    <div class="tab-menu">
+        <button data-target="limited-release">RLBC Limited Release</button>
+        <button data-target="flagship-beers">RLBC Flagship Beers</button>
+        <button data-target="guest-taps">Guest Taps</button>
+        <button data-target="gluten-free">Gluten-Free</button>
+        <button data-target="rlbc-hard-seltzer">RLBC Hard Seltzer</button>
+        <button data-target="ciders">Ciders</button>
+        <button data-target="flights">Flights</button>
+        <button data-target="wines">Wines</button>
+        <button data-target="kombucha">Kombucha</button>
+        <button data-target="alcohol-free">Alcohol-Free</button>
+        <button data-target="sodas">Sodas</button>
+        <button data-target="beer-to-go">Beer To-Go</button>
+    </div>
 
-        <h3>Red Leg x Breckenridge Reserve Blend</h3>
-        <p>750 ml bottle / 86 proof</p>
-        <p>$ 64.92</p>
-    </section>
+    <div id="content-container">
+        <!-- Content will be dynamically generated here -->
+    </div>
 
-    <section>
-        <h2>Seasonal Cocktails</h2>
-
-        <h3>Pumpkin Joe</h3>
-        <p>Harvest Pumpkin Cream, Christian Brothers Brandy, Coffee, Whip Cream, cinnamon</p>
-        <p>$ 8.66</p>
-
-        <h3>Irish Cream and Coffee</h3>
-        <p>$ 9.74</p>
-
-        <h3>Just a Rancher</h3>
-        <p>Cane Silver Rum, Cranberry Juice, Lemon Juice, Amaretto, Peach Schnapps</p>
-        <p>$ 9.74</p>
-
-        <!-- Add other seasonal cocktails as needed -->
-    </section>
-
-    <section>
-        <h2>Signature Cocktails</h2>
-
-        <h3>Spiced Apple Punch</h3>
-        <p>Sailor Jerry Spiced Rum, Spiced Apple Cider, Regatta Ginger Beer, Grenadine, Maraschino Cherry</p>
-        <p>$ 12.98</p>
-
-        <h3>Ultra Margarita</h3>
-        <p>Una Famailia Tequila, Lee Spirits Orange Liquor, fresh squeezed lime juice, orange juice, salted rim</p>
-        <p>$ 12.99</p>
-
-        <!-- Add other signature cocktails as needed -->
-    </section>
-
-    <section>
-        <h2>Classic Cocktails</h2>
-
-        <h3>Bloody Mary</h3>
-        <p>Pearl Vodka, Zing Zang Bloody Mix, Worcestershire, Tabasco, Olives and Citrus</p>
-        <p>$ 8.66</p>
-
-        <h3>House Margarita</h3>
-        <p>Rio Grande Silver Tequila, Juarez Triple Sec, Orange Juice, Jose Margarita Mix</p>
-        <p>$ 8.66</p>
-
-        <!-- Add other classic cocktails as needed -->
-    </section>
-
-    <section>
-        <h2>Whiskey</h2>
-
-        <h3>Benchmark</h3>
-        <p>$ 7.04</p>
-
-        <h3>Jim Beam</h3>
-        <p>$ 7.58</p>
-
-        <!-- Add other whiskey options as needed -->
-    </section>
-
-    <!-- Add other sections for different drink categories (e.g., Scotch, Vodka, Tequila, Gin, Rum, Cordial, Wine, etc.) -->
-
+    <script defer src="beer.js"></script>
 </body>
 
 </html>
