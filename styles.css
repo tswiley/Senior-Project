@@ -191,6 +191,73 @@ p {
     width: 100%;
     display: block;
     margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.subscribe {
+    padding: 20px;
+    text-align: center;
+}
+
+#subscribe-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#subscribe-form h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group p {
+    color: #555;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 
@@ -516,7 +583,7 @@ nav a {
     margin: 0 10px;
 }
 
-@media only screen and (max-width: 1123px) {
+@media only screen and (max-width: 1023px) {
     .menu-toggle {
         display: flex;
     }
@@ -558,7 +625,7 @@ nav a {
         opacity: 0;
     }
 }
-@media only screen and (min-width: 1124px) {
+@media only screen and (min-width: 1024px) {
     main {
         background-color: #fff;
     }
@@ -831,4 +898,5 @@ nav a {
     /* FAQ Page */
     .faq-question {
         width: 75%;
+    }
 }
