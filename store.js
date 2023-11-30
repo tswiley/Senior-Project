@@ -8,12 +8,12 @@ const products = [
     { name: 'Koozie', price: 49.99, description: 'Tan Koozie with Red Leg logo and sketch of the brewery.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/koozie.png' },
     { name: 'Crop Top', price: 34.99, description: 'This modest-crop tee with inset sleeves creates an unforgettable silhouette that you will have to have in all colors. Features: Flowy Fit. Side-seamed. Tailored Sleeve. Modest crop.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/ladiescrewgray.png' },
     { name: 'Muscle Tee - Ladies', price: 16.99, description: 'Perfectly flowy t-shirt and forward enough to wear everywhere, this must-have women’s muscle tee is an on-trend essential. Rolled cuffs add an element of style and a high-low, raw-edge hem gives it need-now appeal.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/ladiesmuscleshirt.png' },
-    { name: 'Product 10', price: 22.99, description: 'Description for Product 10', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/lsgray.png' },
+    { name: 'Crew Neck Sweatshirt – Unisex', price: 22.99, description: 'Independent SS3000 Crew Neck Sweatshirt. Charcoal Heather for men and women.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/lsgray.png' },
     { name: 'Muscle Tank ', price: 18.99, description: 'This updated unisex jersey muscle tank fits like a well-loved favorite, featuring a crew neck, cutoff sleeves with wide armholes and a retail fit. Designed with superior Airlume combed and ring-spun cotton, this tank acts as a blank canvas for printing.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/mensmuscletee.png' },
     { name: 'T-Shirt Mountain Logo – Unisex', price: 27.99, description: '', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/redmountiantee.png' },
-    { name: 'Product 13', price: 11.99, description: 'Description for Product 13', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/Sticker1.png' },
-    { name: 'Product 14', price: 32.99, description: 'Description for Product 14', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/sticker2.png' },
-    { name: 'Product 15', price: 32.99, description: 'Description for Product 15', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/stickerpack.png' },
+    { name: 'Product 13', price: 11.99, description: 'Description for Product 13', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/patch.png' },
+    { name: 'Stickers – Square', price: 1.00, description: 'Includes 2 4"x3" stickers.', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/sticker2.png' },
+    { name: 'Stickers – Variety Pack', price: 1.50, description: 'Includes 3 stickers', image: 'https://raw.githubusercontent.com/tswiley/Senior-Project/main/Merch/stickerpack.png' },
 ];
 
 function addToCart(productName, price, quantity) {
