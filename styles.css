@@ -603,7 +603,6 @@ nav a {
 
     .contact {
         display: flex;
-        position: relative;
         align-items: center;
         padding-top: 20px;
     }
