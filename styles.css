@@ -177,17 +177,17 @@ p {
 }
 
 .beertaps img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .food img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .event img {
-    max-width: 100%;
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -515,7 +515,7 @@ nav a {
     margin: 0 10px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1123px) {
     .menu-toggle {
         display: flex;
     }
@@ -557,7 +557,7 @@ nav a {
         opacity: 0;
     }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1124px) {
     main {
         background-color: #fff;
     }
@@ -631,7 +631,6 @@ nav a {
     .home-intro {
         position: relative;
         overflow: hidden;
-        max-height: auto;
     }
 
     .home-intro img {
