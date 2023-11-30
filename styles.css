@@ -196,9 +196,11 @@ p {
 /* Store page */
 #product-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px; 
+    gap: 20px;
     padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .product {
@@ -211,12 +213,10 @@ p {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 250px; /* Adjust this value based on your design */
-    max-width: 100%; 
-    box-sizing: border-box; /* Include padding and border in the total width */
-    transition: transform 0.3s ease; 
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    max-width: 100%; /* Updated to take full width */
 }
-
 
 .product:hover {
     transform: translateY(-5px); 
@@ -556,7 +556,6 @@ nav a {
     .menu-toggle.open .bar:nth-child(3) {
         opacity: 0;
     }
-
 }
 @media only screen and (min-width: 1024px) {
     main {
@@ -598,6 +597,7 @@ nav a {
         text-decoration: none;
         color: red;
         font-weight: bold;
+        font-size: 25px;
     }
 
     .contact {
@@ -707,12 +707,46 @@ nav a {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .product {
-        max-width: 100%;
+    .product:hover {
+        transform: translateY(-5px);
     }
 
     .product img {
-        max-height: 300px;
+        max-width: 100%;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        object-fit: cover;
+    }
+
+    .product-content {
+        padding: 20px;
+    }
+
+    .product h2 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .product p {
+        margin-bottom: 10px;
+        color: #555;
+        word-wrap: break-word;
+    }
+
+    .product button {
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .product button:hover {
+        background-color: #0056b3;
     }
     
     /* contact form */
