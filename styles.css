@@ -205,7 +205,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    /* text-align: left; */
+    word-wrap: break-word;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -239,6 +240,7 @@ p {
 .product p {
     margin-bottom: 10px;
     color: #555;
+    overflow-wrap: normal;
 }
 
 .product button {
