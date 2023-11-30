@@ -205,13 +205,13 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* text-align: left; */
     word-wrap: break-word;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
+    min-width: 250px; /* Adjust this value based on your design */
+    max-width: 100%; 
     box-sizing: border-box;
     transition: transform 0.3s ease; 
 }
@@ -240,7 +240,8 @@ p {
 .product p {
     margin-bottom: 10px;
     color: #555;
-    overflow-wrap: normal;
+    min-width: 100px;
+    max-width: 100%;
 }
 
 .product button {
@@ -711,6 +712,11 @@ nav a {
 
     .product img {
         max-height: 300px;
+    }
+
+    .product p {
+        min-width: 350px;
+        max-width: 350px;
     }
     
     /* contact form */
