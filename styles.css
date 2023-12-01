@@ -500,7 +500,6 @@ button:hover {
     margin-top: 5px;
 }
 
-/* Specific styles for the contact page */
 .contactUs .success-message {
     display: block;
 }
@@ -523,7 +522,6 @@ button:hover {
     height: auto;
 }
 
-/* Adjust the sizes for specific images if needed */
 .brewers img {
     max-height: 800px;
 }
@@ -668,6 +666,14 @@ button:hover {
 
 .faq-question:hover {
     background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+/* cart page */
+
+#checkout button {
+    display: block;
+    background-color: #0A3161;
+    font-size: 25px;
 }
 
 /* Style the footer */

@@ -24,21 +24,39 @@ function addToCart(productName, price, quantity) {
     cartItem.dataset.name = productName;
     cartItem.dataset.price = price;
     cartItem.dataset.quantity = quantity;
-
+  
     // Display the cart item in the list
     cartItem.textContent = `${productName} - $${(price * quantity).toFixed(2)} (${quantity}x)`;
-
+  
     // Append the cart item to the cart items list
     const cartItemsContainer = document.getElementById('cart-items');
     cartItemsContainer.appendChild(cartItem);
-
+  
     // Update the cart total
-    updateCart();
-}
+    updateCartTotal();
+  
+    // Log for testing
+    console.log(`Item added to cart: ${productName} - Quantity: ${quantity}`);
+  }
 
-function updateCart() {
+  function updateCart() {
     // Your existing updateCart logic
-}
+    updateCartTotal();
+  }
+  
+  function updateCartTotal() {
+    const cartItems = document.querySelectorAll('#cart-items li');
+    let total = 0;
+  
+    cartItems.forEach(item => {
+      const price = parseFloat(item.dataset.price);
+      const quantity = parseInt(item.dataset.quantity);
+      total += price * quantity;
+    });
+  
+    const cartTotalElement = document.getElementById('cart-total');
+    cartTotalElement.textContent = `Total: $${total.toFixed(2)}`;
+  }
 
 function checkout() {
     // Your existing checkout logic
