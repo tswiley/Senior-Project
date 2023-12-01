@@ -501,6 +501,15 @@ button:hover {
 }
 
 /* about page */
+
+.about h1 {
+    padding: 50px;
+}
+
+.about p {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 .about-img img,
 .owner img,
 .brewers img {
@@ -520,6 +529,13 @@ button:hover {
 }
 .bartender-img {
     max-width: 100%;
+}
+
+.beer-page h2 {
+    padding-top: 50px;
+}
+.beer-page h3 {
+    padding: 30px;
 }
 
 .tab-menu {
@@ -606,7 +622,7 @@ footer {
     align-items: center;
 }
 
-.home-intro img[src="Logos/chevronlogored.png"] {
+.footer-logo img[src="Logos/chevronlogored.png"] {
     height: 400px;
 }
 
@@ -640,18 +656,20 @@ footer {
 }
 
 .footer-nav a,
-    .copyright a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
+.copyright a {
+    color: #fff;
+    text-decoration: none;
+    padding: 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
 
 .footer-nav a:hover,
-    .copyright a:hover {
-        background-color: red;
-    }
+.copyright a:hover {
+    background-color: red;
+}
 
 @media only screen and (max-width: 1023px) {
     .menu-toggle {
@@ -718,6 +736,7 @@ footer {
 
     .nav {
         display: flex;
+        justify-content: center;
     }
 
     .nav ul {
@@ -736,7 +755,8 @@ footer {
         text-decoration: none;
         color: red;
         font-weight: bold;
-        font-size: 25px;
+        font-size: 30px;
+        padding: 10px;
     }
 
     .contact {
@@ -1016,7 +1036,6 @@ footer {
     }
     
     .contact {
-        grid-area: contact;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -1042,11 +1061,7 @@ footer {
         justify-content: space-around;
         align-items: center;
     }
-    
-    
-    
-    
-    
+
     .copyright {
         grid-column: span 3; 
         text-align: center; 
