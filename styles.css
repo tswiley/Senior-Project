@@ -431,12 +431,12 @@ button.checkout-btn:hover {
     padding: 5px;
 }
 
-/* form page */
+/* Contact page */
 .contactUs {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
+    padding-top: 50px;
     background-color: #f4f4f4;
     flex-direction: column; /* Adjust for a better layout on mobile */
 }
@@ -482,7 +482,7 @@ textarea {
 button {
     width: 100%;
     padding: 15px;
-    background-color: #007bff;
+    background-color: #0A3161;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -741,21 +741,21 @@ footer {
 
     .nav ul {
         list-style: none;
-        justify-self: center;
         display: flex;
+        justify-content: center;
         margin: 0;
-        padding-top: 15px;
+        padding: 15px 0;
     }
-
+    
     .nav li {
-        margin-right: 20px;
+        margin-right: 10px;
     }
-
+    
     .nav a {
         text-decoration: none;
         color: red;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 18px; /* Adjust the font size to your liking */
         padding: 10px;
     }
 
