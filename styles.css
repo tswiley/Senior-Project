@@ -500,6 +500,12 @@ button:hover {
     margin-top: 5px;
 }
 
+/* Specific styles for the contact page */
+.contactUs .success-message {
+    display: block;
+}
+
+
 /* about page */
 
 .about h1 {
