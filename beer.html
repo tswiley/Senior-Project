@@ -13,25 +13,18 @@
 </head>
 
 <body>
-    <img src="Images/bartender.jpg" alt="bartender serving drinks">
-
-    <div class="tab-menu">
-        <button data-target="limited-release">RLBC Limited Release</button>
-        <button data-target="flagship-beers">RLBC Flagship Beers</button>
-        <button data-target="guest-taps">Guest Taps</button>
-        <button data-target="gluten-free">Gluten-Free</button>
-        <button data-target="rlbc-hard-seltzer">RLBC Hard Seltzer</button>
-        <button data-target="ciders">Ciders</button>
-        <button data-target="flights">Flights</button>
-        <button data-target="wines">Wines</button>
-        <button data-target="kombucha">Kombucha</button>
-        <button data-target="alcohol-free">Alcohol-Free</button>
-        <button data-target="sodas">Sodas</button>
-        <button data-target="beer-to-go">Beer To-Go</button>
-    </div>
-
-    <div id="content-container">
-        <!-- Content will be dynamically generated here -->
+    <img src="Images/bartender.jpg" class="bartender-img" alt="bartender serving drinks">
+    <div class="beer-page">
+        <div class="tab-menu">
+            <button data-target="limited-release">RLBC Limited Release</button>
+            <button data-target="flagship-beers">RLBC Flagship Beers</button>
+            <button data-target="guest-taps">Guest Taps</button>
+            <button data-target="gluten-free">Gluten-Free</button>
+            <button data-target="flights">Flights</button>
+        </div>
+        <div id="content-container">
+            <!-- Content will be dynamically generated here -->
+        </div>
     </div>
 
     <script defer src="beer.js"></script>

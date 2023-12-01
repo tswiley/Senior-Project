@@ -1,5 +1,3 @@
-// beer.js
-
 $(document).ready(function () {
     const sections = [
         {
@@ -45,95 +43,30 @@ $(document).ready(function () {
             ]
         },
         {
-            target: "rlbc-hard-seltzer",
-            title: "RLBC Hard Seltzer",
-            items: [
-                { name: "Naked Seltzer", abv: "5.0%", description: "Alcoholic bubbly water...", price: "$ 5.95" },
-                { name: "Blueberry Seltzer", abv: "5.0%", description: "Red Leg Brewing", price: "$ 6.50" }
-            ]
-        },
-        {
-            target: "ciders",
-            title: "Ciders",
-            items: [
-                { name: "Colorado Cider Company Glider Cider", abv: "6.5%", description: "CCC's flagship cider features a nose of sliced apples, a light sweetness, fresh apple flavors and a hint of tartness. It finishes much dryer than mass-market ciders.", price: "$ 7.95" }
-            ]
-        },
-        {
             target: "flights",
             title: "Flights",
             items: [
                 { name: "Create Your Own Flight", description: "Pick 4 from our tap List", price: "$ 12.00" }
             ]
         },
-        {
-            target: "wines",
-            title: "Wines",
-            items: [
-                { name: "Prosseco", price: "$ 7.04" },
-                { name: "Snow Bunny Strawberry Lemon Wine", description: "Evergood Elixers (Wine made from Lemons)", price: "$ 7.58" },
-                { name: "Pinot Grigio", price: "$ 7.58" },
-                { name: "California Red Blend", price: "$ 7.58" },
-                { name: "Stella Rosa Grapefruit Moscato", price: "$ 7.58" },
-                { name: "Skier Pee Lemon Wine", description: "Evergood Elixers (Wine made from Lemons)", price: "$ 7.58" },
-                { name: "Stella Rosa Pineapple Moscato", price: "$ 7.58" },
-                { name: "Chardonnay", price: "$ 7.58" },
-                { name: "Cabernet Sauvignon", price: "$ 7.58" },
-                { name: "Merlot", price: "$ 7.58" }
-            ]
-        },
-        {
-            target: "kombucha",
-            title: "Kombucha",
-            items: [
-                { name: "Guava Berry Kombucha", description: "Non-Alcoholic", price: "$ 7.03" }
-            ]
-        },
-        {
-            target: "alcohol-free",
-            title: "Alcohol-Free",
-            items: [
-                { name: "Grüvi Golden Lager NA Craft Beer", description: "12 oz can", price: "$ 5.41" },
-                { name: "Grüvi Juicy IPA NA Craft Beer", description: "12 oz can", price: "$ 5.41" },
-                { name: "Hoplark Citra Alcohol Free", description: "Double Dry Hopped with Citra Hops. 0 Calorie, 0 Sugar, 0 Carb, Gluten Free Flavor Bomb.12 oz can", price: "$ 4.60" },
-                { name: "Grüvi Bubbly Rose' Alcohol Free", description: "9.3 oz bottle, 60 Calories", price: "$ 6.50" }
-            ]
-        },
-        {
-            target: "sodas",
-            title: "Sodas",
-            items: [
-                { name: "Sprite", description: "12 oz can", price: "$ 2.17" },
-                { name: "Fanta Orange Soda", description: "12 oz can", price: "$ 2.17" },
-                { name: "Dr. Pepper", description: "12 oz can", price: "$ 2.17" },
-                { name: "Diet Coke", description: "12 oz can", price: "$ 2.17" },
-                { name: "Coke", description: "12 oz can", price: "$ 2.17" }
-            ]
-        },
-        {
-            target: "beer-to-go",
-            title: "Beer To-Go",
-            items: [
-                { name: "Crowlers", description: "32 oz can of any draft product. Prices vary, ask your server", price: "$ 0.00" },
-                { name: "Six Pack", description: "Six 12 oz cans", price: "$ 11.91" }
-            ]
-        }
     ];
 
     const contentContainer = $('#content-container');
 
     function generateSectionHTML(section) {
-        const sectionHTML = `<section class="${section.target}">
+        const sectionHTML = `<section class="section ${section.target}">
                                 <h2>${section.title}</h2>
-                                ${generateItemsHTML(section.items)}
+                                <div class="items">${generateItemsHTML(section.items)}</div>
                             </section>`;
         return sectionHTML;
     }
 
     function generateItemsHTML(items) {
-        return items.map(item => `<h3>${item.name} ${item.abv ? `(${item.abv})` : ''}</h3>
-                                  ${item.description ? `<p>${item.description}</p>` : ''}
-                                  <p>${item.price}</p>`).join('');
+        return items.map(item => `<div class="item">
+                                    <h3>${item.name} ${item.abv ? `(${item.abv})` : ''}</h3>
+                                    ${item.description ? `<p>${item.description}</p>` : ''}
+                                    <p>${item.price}</p>
+                                </div>`).join('');
     }
 
     function showSection(target) {
