@@ -208,8 +208,11 @@ p {
     color: #333;
 }
 
-.success-popup {
+.success-message {
     display: none;
+}
+
+.success-popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -593,7 +596,6 @@ button:hover {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
 }
 
@@ -604,10 +606,22 @@ footer {
     align-items: center;
 }
 
+.home-intro img[src="Logos/chevronlogored.png"] {
+    height: 400px;
+}
+
 /* Hours and Contact sections */
 .hours,
 .contact {
     margin-bottom: 20px;
+}
+
+.hours h3 {
+    font-size: 30px;
+}
+.hours p {
+    padding: 10px;
+    font-size: 20px;
 }
 
 /* Social media icons */
@@ -621,21 +635,14 @@ footer {
 }
 
 .social-icons img {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Adjust the size as needed */
-}
-
-/* Footer navigation links */
-nav {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    width: 30px; 
+    height: 30px; 
 }
 
 nav a {
     color: #fff;
     margin: 0 10px;
+    width: 100%;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -981,4 +988,74 @@ nav a {
     .faq-question {
         width: 75%;
     }
+
+    /* footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-areas: "intro hours contact";
+    }
+    
+    .home-intro {
+        grid-area: intro;
+    }
+    
+    .hours {
+        grid-area: hours;
+    }
+    
+    .contact {
+        grid-area: contact;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 20px;
+        width: auto;
+    }
+    
+    .contact p {
+        padding: 10px;
+    }
+    
+    .footer-nav {
+        grid-column: span 3; /* Span the full width of the grid */
+        text-align: center;
+        padding-top: 20px;
+    }
+    .footer-nav,
+    .copyright {
+        width: 100%;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .footer-nav a,
+    .copyright a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .footer-nav a:hover,
+    .copyright a:hover {
+        background-color: red;
+    }
+    
+    .copyright {
+        grid-column: span 3; /* Span the full width of the grid */
+        text-align: center; /* Optional: Center-align the text */
+    }
+    
+    
 }

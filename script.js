@@ -29,27 +29,22 @@ $(document).ready(function () {
 
     // Subscribe form handling
     $('#subscribe-form').submit(function (event) {
-        console.log('Form submitted'); // Log that the form is submitted
         event.preventDefault(); // Prevent the default form submission
-    
+
         const emailInput = $('#email');
         const successMessage = $('#success-message');
-    
+
         // Validate the email format
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const isValidEmail = emailPattern.test(emailInput.val());
-    
-        console.log('Email validation:', isValidEmail); // Log the result of email validation
-    
+
         if (isValidEmail) {
             // Display the success message and clear the input
             successMessage.show();
             emailInput.val('');
-            console.log('Success message displayed');
         } else {
             // Optionally display an error message for invalid email
             alert('Please enter a valid email address.');
-            console.log('Invalid email address');
         }
     });
     
